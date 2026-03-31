@@ -18,7 +18,6 @@ describe("Playwright Website - Navigation Tests", () => {
     cy.log("[Suite] Navigating to playwright.dev before each test");
     test.homePage.visit();
   });
-  
 
   it("should load playwright.dev and URL should contain 'playwright.dev'", () => {
     cy.log("[Test 1] Verifying home page URL");
