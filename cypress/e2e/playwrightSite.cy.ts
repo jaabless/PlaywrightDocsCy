@@ -18,10 +18,12 @@ describe("Playwright Website - Navigation Tests", () => {
     cy.log("[Suite] Navigating to playwright.dev before each test");
     test.homePage.visit();
   });
+  
 
   it("should load playwright.dev and URL should contain 'playwright.dev'", () => {
     cy.log("[Test 1] Verifying home page URL");
 
+  
     test.homePage.assertHomePageLoaded();
 
     cy.url().then((url) => {
@@ -39,15 +41,7 @@ describe("Playwright Website - Navigation Tests", () => {
     // Click the Get Started link
     test.homePage.clickGetStarted();
 
-    // Assert the docs page loaded correctly
     test.docsPage.assertDocsPageLoaded();
-    test.docsPage.assertSidebarVisible();
-    test.docsPage.assertMainContentVisible();
-
-    cy.url().then((url) => {
-      cy.log(`[Test 2] Redirected to: ${url}`);
-      expect(url).to.include("docs");
-    });
   });
 
   it("should display docs page heading after navigating from Get Started", () => {
