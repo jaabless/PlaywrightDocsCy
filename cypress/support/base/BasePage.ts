@@ -8,6 +8,7 @@ export class BasePage {
     cy.task("log", message);
   }
 
+  
   visit(path: string = "/"): void {
     this.log(`Navigating to: ${path}`);
     cy.visit(path);
