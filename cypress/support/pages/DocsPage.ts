@@ -7,7 +7,7 @@ export class DocsPage extends BasePage {
   // Locators
   private readonly sidebar = "nav.theme-doc-sidebar-menu";
   private readonly mainContent = "article";
-  private readonly docHeading = "h8";
+  private readonly docHeading = "h1";
 
   assertDocsPageLoaded(): void {
     this.assertUrlContains("docs");
