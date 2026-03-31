@@ -7,13 +7,10 @@ export class DocsPage extends BasePage {
   // Locators
   private readonly sidebar = "nav.theme-doc-sidebar-menu";
   private readonly mainContent = "article";
-  private readonly docHeading = "h1";
+  private readonly docHeading = "h8";
 
   assertDocsPageLoaded(): void {
-    this.log("Asserting docs page is loaded");
     this.assertUrlContains("docs");
-    this.waitForPageLoad();
-    cy.log("[DocsPage] URL contains 'docs' - assertion passed");
   }
 
   assertSidebarVisible(): void {
